@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Roboto:100,300,700');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto';
+  font-size: 15px;
+  line-height: 2.5em;
+  font-weight: 400;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 40px 0;
+  width: 90%;
+}
+
+.obstaculo {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 60px;
+  opacity: 0;
+}
+
+.rover-pic {
+  position: absolute; 
+  left: 0px; 
+  top: 0px; 
+  height: 60px;
+  box-sizing: border-box;
+}
+
+#rover-pic1 {
+  opacity: 0;
+  border: 2px solid red;
+}
+
+#rover-pic2 {
+  opacity: 0;
+  border: 2px solid green;
+}
+
+#rover-pic3{
+  opacity: 0;
+  border: 2px solid blueviolet;
+}
+
+
+/**********************
+ * Content
+ **********************/
+
+.content {
+  float: left;
+  margin: 80px 3% 0 5%;
+  text-align: left;
+  width: 40%;
+  box-sizing: border-box;
+}
+
+/* Select Obstacles */
+
+.select-obstacles {
+  margin-bottom: 20px;
+}
+
+.select-obstacles button {
+  border: 2px solid black;
+  background: rgba(192, 192, 192, 0.479);
+  margin: 10px 0 0 20px;
+  width: 80px;
+  padding: 5px 0;
+  text-align: center;
+  border-radius: 50px;
+  width: 200px;
+  font-weight: 600;
+}
+
+/* Select Keyboard */
+
+.keyboard {
+  width: 250px;
+  text-align: center;
+  margin: 10px 0 20px 0;			
+  float: left;
+}
+
+.keyboard-up {
+  border: 2px solid green;
+  background: rgba(0, 128, 0, 0.486);
+  width: 90px;
+  padding: 5px 0;
+  border-radius: 50px;
+  color: white;
+}
+
+.keyboard-down {
+  border: 2px solid blue;
+  background: rgba(0, 0, 255, 0.507);
+  width: 90px;
+  padding: 5px 0;
+  border-radius: 50px;
+  color: white;
+}
+
+.keyboard-left {
+  border: 2px solid rgb(252, 143, 161);
+  background: pink;
+  margin: 10px 10px;
+  width: 90px;
+  padding: 5px 0;
+  text-align: center;
+  border-radius: 50px;
+  color: white;
+}
+
+.keyboard-right {
+  border: 2px solid red;
+  background: rgba(255, 96, 96, 0.986);
+  margin: 10px 10px;
+  width: 90px;
+  padding: 5px 0;
+  text-align: center;
+  border-radius: 50px;
+  color: white;
+}
+
+.next-round {
+  display: inline-block;
+  text-align: center;
+  width: 150px;
+  height: 150px;
+}
+
+.next-round button{
+  border: 2px solid black;
+  background: white;
+  padding: 5px 0;
+  border-radius: 50px;
+  width: 110px;
+  font-weight: 600;
+  margin-top: 56px;
+}
+
+/* select-command */
+
+.select-command {
+  margin-bottom: 20px;
+}
+
+.select-command ol {
+  margin: 0px 0 10px 50px;
+}
+
+.command-input {
+  margin: 20px 0 0 25px;
+}
+
+.command-input input{
+  background: white;
+  border: 2px solid black;
+  padding: 5px 0px 5px 20px;
+  width: 300px;
+  border-radius: 50px;
+  margin-right: 10px;
+}
+
+.command-input button {
+  background: rgba(128, 0, 128, 0.5);
+  border: 2px solid purple;
+  padding: 5px 10px;
+  color: white;
+  border-radius: 50px;
+  width: 100px;
+}
+
+/* Add new Rovers */
+
+.multiple-rovers {
+  margin-bottom: 20px;
+}
+
+.multiple-rovers button {
+  border: 2px solid black;
+  background: rgb(211, 158, 59);
+  margin: 10px 0 0 20px;
+  padding: 5px 0;
+  text-align: center;
+  border-radius: 50px;
+  width: 200px;
+  font-weight: 600;
+  color: black;
+}
+
+
+/**********************
+ * Board
+ **********************/
+
+/* board */
+
+.board-outer {
+  float: left;
+  width: 40%;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+
+.board-inner {
+  position: relative; 
+  width: 600px;
+  height: 600px;
+  border: 1px solid black;
+  margin: 0px auto;
+}
+
+#chess {
+  width: 600px;
+  opacity: 0.5;
+}
+
+/* Emojis */
+
+.container-emojis {
+  width: 600px;
+  text-align: center;
+  margin-bottom: 5px;
+	margin-left: 30px;
+}
+
+.container-robot {
+  display: inline-block;
+  height: 70px;
+}
+
+.container-finger {
+  position: relative;
+  display: inline-block;
+  height: 70px;
+  width: 70px;
+}
+
+.finger {
+  height: 50px;
+  opacity: 0;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+#finger-up {
+  opacity: 1;
+}
+
+.robot {
+  height: 70px;
+  vertical-align: center;
+}
+
+
+/* Clearfix */
+
+.clearfix {
+  clear: both;
+}

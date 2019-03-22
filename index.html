@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+	<title>Mars Rover</title>
+	<link rel="stylesheet" href="./css/style.css">
+	<script src="./javascript/rover.js "></script>
+	<script src="./javascript/print.js "></script>
+	<script src="./javascript/motion.js "></script>
+	<script src="./javascript/commands.js "></script>
+	<script src="./javascript/obstacles.js "></script>
+	<script src="./javascript/browser.js "></script>
+	<script src="./javascript/app.js "></script>
+</head>
+
+<body>
+	<div class="container">	
+
+		<!-- content -->
+
+		<div class="content">
+			<!-- 1. obstacles -->
+			<div class="select-obstacles">
+				<p><b>1. Selecciona el numero de obstaculos de 10 elementos maximo.</b></p>
+				<button onclick="createObstacles()">Obstaculos</button>
+			</div>
+			<!-- 2. Keyboard -->
+			<div class="select-keyboard">
+				<p><b>2. Es la hora de mover a rover. Selecciona una de las siguientes opciones:</b></p>
+				<div class="keyboard">
+					<button onclick="moveForward(rover)" class="keyboard-up">Forward</button>
+					<div>
+						<button onclick="turnLeft(rover)" class="keyboard-left">Turn Left</button>
+						<button onclick="turnRight(rover)" class="keyboard-right">Turn Right</button>					
+					</div>
+					<button onclick="moveBackward(rover)" class="keyboard-down">Backward</button>
+				</div>
+				<div class="next-round">
+					<button onclick="actualizaTurnoRover()">Next Round</button>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<!-- 3.Commands  -->
+			<div class="select-command">
+				<p><b>3. Puedes seleccionar una lista de comandos de la siguiente manera:</b></p>
+				<ol>
+					<li>(f) mover hacia alante</li>
+					<li>(b) mover hacia atras</li>
+					<li>(l) girar hacia la izquierda</li>
+					<li>(r) girar hacia la derecha</li>
+				</ol>
+				<div class="command-input">
+					<input type="text" id="commands">
+					<button onclick="createCommands()">Aceptar</button>
+				</div>
+			</div>
+			<!-- 4. multiple-rovers -->
+			<div class="multiple-rovers">
+				<p><b>4. Introduzca un nuevo Rover</b></p>
+				<button onclick="addRovers()">Add Rovers</button>
+			</div>
+		</div>
+
+
+		<!-- Board -->
+
+		<div class="board-outer">
+			<!-- 1. Emojis -->
+			<div class="container-emojis">
+				<img src="./images/robot.png" id='robot' class="robot">
+				<div class="container-finger" id="container-finger">
+					<img src="./images/finger-up.png" id='finger-up' class="finger">
+					<img src="./images/finger-down.png" id='finger-down' class="finger">
+					<img src="./images/finger-left.png" id='finger-left' class="finger">
+					<img src="./images/finger-right.png" id='finger-right' class="finger">
+				</div>
+			</div>
+			<!-- 2. Board -->
+			<div class="board-inner">	
+				<img src="./images/10x10.png" id='chess'>		
+				<img src="./images/rover.jpg" id='rover-pic0' class='rover-pic'>
+				<img src="./images/rover.jpg" id='rover-pic1' class='rover-pic'>
+				<img src="./images/rover.jpg" id='rover-pic2' class='rover-pic'>
+				<img src="./images/obstacle.png" id='obstaculo0' class="obstaculo">
+				<img src="./images/obstacle.png" id='obstaculo1' class="obstaculo">
+				<img src="./images/obstacle.png" id='obstaculo2' class="obstaculo">
+				<img src="./images/obstacle.png" id='obstaculo3' class="obstaculo">
+				<img src="./images/obstacle.png" id='obstaculo4' class="obstaculo">
+				<img src="./images/obstacle.png" id='obstaculo5' class="obstaculo">
+				<img src="./images/obstacle.png" id='obstaculo6' class="obstaculo">
+				<img src="./images/obstacle.png" id='obstaculo7' class="obstaculo">
+				<img src="./images/obstacle.png" id='obstaculo8' class="obstaculo">
+				<img src="./images/obstacle.png" id='obstaculo9' class="obstaculo">
+			</div>
+		</div>
+
+
+		<!-- Clearfix -->
+		<div class="clearfix"></div>
+
+	</div>
+</body>
+</html>
